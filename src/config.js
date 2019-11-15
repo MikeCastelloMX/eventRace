@@ -1,0 +1,1 @@
+export const URL = 'https://gist.githubusercontent.com/pitakill/5bd0f5717466e44f17ff285cfdbf6b3b/raw/b90d2f5853982c38cb3cbc3c5acdee1b1b34b713/info.json'
