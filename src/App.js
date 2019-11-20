@@ -1,6 +1,7 @@
 import React from 'react';
 import Subheader from './components/Subheader';
-import Table from './components/Table';
+// import Table from './components/Table';
+import Users from './components/Users';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
       </div>
 
       <div className="kt-portlet__body">
-        <Table />
+        <Users />
       </div>
     </div>	</div>
     </div>
