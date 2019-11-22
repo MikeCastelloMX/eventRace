@@ -1,7 +1,9 @@
 import React from 'react'
 import logo from '../media/logos/logo-1.png'
 
-function Sidebar() {
+function Sidebar(props) {
+  const defaultClassesButton = "kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left"
+
   return (
     <>
       <button className="kt-aside-close " id="kt_aside_close_btn">
@@ -15,15 +17,21 @@ function Sidebar() {
             </a>
           </div>
           <div className="kt-aside__brand-tools">
-            <button className="kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left" id="kt_aside_toggler"><span></span></button>
-          </div>	 
+            <button
+              className={props.open ? defaultClassesButton : `${defaultClassesButton} kt-aside__brand-aside-toggler--active`}
+              id="kt_aside_toggler"
+              onClick={() => props.toggleOpen(!props.open)}
+              >
+              <span />
+            </button>
+          </div>
         </div>
         <div className="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
         <div
           id="kt_aside_menu"
-          className="kt-aside-menu "
+          className="kt-aside-menu"
           data-ktmenu-vertical="1"
-           data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500"
+          data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500"
           >
             <ul className="kt-menu__nav ">
               <li className="kt-menu__section kt-menu__section--first">
