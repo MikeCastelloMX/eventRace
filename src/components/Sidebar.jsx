@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../media/logos/logo-1.png'
 import Submenu from './Submenu'
 
@@ -40,14 +41,22 @@ function Sidebar(props) {
                 <i className="kt-menu__section-icon flaticon-more-v2" />
               </li>
               <li className="kt-menu__item " aria-haspopup="true" >
-                <a
-                  target="_blank"
-                  href="https://keenthemes.com/keen/preview/demo2/builder.html" className="kt-menu__link "
-                  rel="noopener noreferrer"
+                <Link
+                  to="/users"
+                  className="kt-menu__link "
                   >
                   <i className="kt-menu__link-icon flaticon-cogwheel-1" />
-                  <span className="kt-menu__link-text">Builder</span>
-                </a>
+                  <span className="kt-menu__link-text">Users</span>
+                </Link>
+              </li>
+              <li className="kt-menu__item " aria-haspopup="true" >
+                <Link
+                  to="/table"
+                  className="kt-menu__link "
+                  >
+                  <i className="kt-menu__link-icon flaticon-cogwheel-1" />
+                  <span className="kt-menu__link-text">Table</span>
+                </Link>
               </li>
               <li className="kt-menu__section ">
                 <h4 className="kt-menu__section-text">Custom</h4>
