@@ -22,18 +22,14 @@ const users = [
     }
 ]
 
-class Users extends React.Component {
-    render() {
-        return (
-            <div className="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-                <div className="row">
-                   {
-                       users.map((e, i) => <Card key={i} data={e} />)
-                   } 
-                </div> 
-            </div>
-        )
-    }
+function Users() {
+  return (
+    <div className="row">
+       {
+           users.map((e, i) => <Card key={i} data={e} />)
+       }
+    </div>
+  )
 }
 
 export default Users
