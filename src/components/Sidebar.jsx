@@ -1,17 +1,9 @@
 import React from 'react'
 import logo from '../media/logos/logo-1.png'
+import Submenu from './Submenu'
 
 function Sidebar(props) {
   const defaultClassesButton = "kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left"
-  const defaultClassesSubmenu = "kt-menu__item kt-menu__item--submenu"
-
-  const [submenu, toggleSubmenu] = React.useState(false)
-  const [submenuInner, toggleSubmenuInner] = React.useState(false)
-
-  const handleClick = (e, fn, p) => {
-    e.preventDefault()
-    fn(!p)
-  }
 
   return (
     <>
@@ -61,128 +53,8 @@ function Sidebar(props) {
                 <h4 className="kt-menu__section-text">Custom</h4>
                 <i className="kt-menu__section-icon flaticon-more-v2"></i>
               </li>
-              <li
-                className={submenu ? `${defaultClassesSubmenu} kt-menu__item--open` : defaultClassesSubmenu}
-                aria-haspopup="true"
-                data-ktmenu-submenu-toggle="hover"
-                >
-                <a href="/" className="kt-menu__link kt-menu__toggle" onClick={e => handleClick(e, toggleSubmenu, submenu)}>
-                  <i className="kt-menu__link-icon flaticon-web" />
-                  <span className="kt-menu__link-text">
-                    Apps
-                  </span>
-                  <i className="kt-menu__ver-arrow la la-angle-right" />
-                </a>
-                <div className="kt-menu__submenu ">
-                  <span className="kt-menu__arrow" />
-                  <ul className="kt-menu__subnav">
-                    <li className="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
-                      <span className="kt-menu__link">
-                        <span className="kt-menu__link-text">Apps</span>
-                      </span>
-                    </li>
-                    <li
-                      className={submenuInner ? `${defaultClassesSubmenu} kt-menu__item--open` : defaultClassesSubmenu}
-                      aria-haspopup="true" data-ktmenu-submenu-toggle="hover"
-                      >
-                      <a href="/" className="kt-menu__link kt-menu__toggle" onClick={e => handleClick(e, toggleSubmenuInner, submenuInner)}>
-                        <i className="kt-menu__link-bullet kt-menu__link-bullet--line">
-                          <span />
-                        </i>
-                        <span className="kt-menu__link-text">Users</span>
-                        <i className="kt-menu__ver-arrow la la-angle-right"/>
-                      </a>
-                      <div className="kt-menu__submenu ">
-                        <span className="kt-menu__arrow" />
-                        <ul className="kt-menu__subnav">
-                          <li className="kt-menu__item kt-menu__item--parent" aria-haspopup="true">
-                            <span className="kt-menu__link">
-                              <span className="kt-menu__link-text">Users</span>
-                            </span>
-                          </li>
-                          <li className="kt-menu__item" aria-haspopup="true">
-                            <a href="demo2/custom/users/list-columns-1.html" className="kt-menu__link ">
-                              <i className="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                <span />
-                              </i>
-                              <span className="kt-menu__link-text">List - Columns 1</span>
-                            </a>
-                          </li>
-                          <li className="kt-menu__item " aria-haspopup="true">
-                            <a href="demo2/custom/users/list-columns-2.html" className="kt-menu__link ">
-                              <i className="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                <span/>
-                              </i>
-                              <span className="kt-menu__link-text">List - Columns 2</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li
-                className={submenu ? `${defaultClassesSubmenu} kt-menu__item--open` : defaultClassesSubmenu}
-                aria-haspopup="true"
-                data-ktmenu-submenu-toggle="hover"
-                >
-                <a href="/" className="kt-menu__link kt-menu__toggle" onClick={e => handleClick(e, toggleSubmenu, submenu)}>
-                  <i className="kt-menu__link-icon flaticon-web" />
-                  <span className="kt-menu__link-text">
-                    Apps
-                  </span>
-                  <i className="kt-menu__ver-arrow la la-angle-right" />
-                </a>
-                <div className="kt-menu__submenu ">
-                  <span className="kt-menu__arrow" />
-                  <ul className="kt-menu__subnav">
-                    <li className="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
-                      <span className="kt-menu__link">
-                        <span className="kt-menu__link-text">Apps</span>
-                      </span>
-                    </li>
-                    <li
-                      className={submenuInner ? `${defaultClassesSubmenu} kt-menu__item--open` : defaultClassesSubmenu}
-                      aria-haspopup="true" data-ktmenu-submenu-toggle="hover"
-                      >
-                      <a href="/" className="kt-menu__link kt-menu__toggle" onClick={e => handleClick(e, toggleSubmenuInner, submenuInner)}>
-                        <i className="kt-menu__link-bullet kt-menu__link-bullet--line">
-                          <span />
-                        </i>
-                        <span className="kt-menu__link-text">Users</span>
-                        <i className="kt-menu__ver-arrow la la-angle-right"/>
-                      </a>
-                      <div className="kt-menu__submenu ">
-                        <span className="kt-menu__arrow" />
-                        <ul className="kt-menu__subnav">
-                          <li className="kt-menu__item kt-menu__item--parent" aria-haspopup="true">
-                            <span className="kt-menu__link">
-                              <span className="kt-menu__link-text">Users</span>
-                            </span>
-                          </li>
-                          <li className="kt-menu__item" aria-haspopup="true">
-                            <a href="demo2/custom/users/list-columns-1.html" className="kt-menu__link ">
-                              <i className="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                <span />
-                              </i>
-                              <span className="kt-menu__link-text">List - Columns 1</span>
-                            </a>
-                          </li>
-                          <li className="kt-menu__item " aria-haspopup="true">
-                            <a href="demo2/custom/users/list-columns-2.html" className="kt-menu__link ">
-                              <i className="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                <span/>
-                              </i>
-                              <span className="kt-menu__link-text">List - Columns 2</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+              <Submenu title="Apps 1"/>
+              <Submenu title="Apps 2"/>
             </ul>
           </div>
         </div>
