@@ -58,6 +58,15 @@ function Sidebar(props) {
                   <span className="kt-menu__link-text">Table</span>
                 </Link>
               </li>
+              <li className="kt-menu__item " aria-haspopup="true" >
+                <Link
+                  to="/faq"
+                  className="kt-menu__link "
+                  >
+                  <i className="kt-menu__link-icon flaticon-cogwheel-1" />
+                  <span className="kt-menu__link-text">FAQ</span>
+                </Link>
+              </li>
               <li className="kt-menu__section ">
                 <h4 className="kt-menu__section-text">Custom</h4>
                 <i className="kt-menu__section-icon flaticon-more-v2"></i>
