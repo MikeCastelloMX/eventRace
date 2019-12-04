@@ -10888,15 +10888,15 @@ input.btn.btn-label-skype {
     color: #ffffff; }
   .btn.btn-icon.btn-focus i {
     color: #ffffff; }
-  .btn.btn-icon.btn-focus:focus i, .btn.btn-icon.btn-focus:hover i, .btn.btn-icon.btn-focus.active i {
+  .btn.btn-icon.btn-focus:focus i, .btn.btn-icon.btn-focus:hover i, .btn.btn-icon.btnmfocus.active i {
     color: #ffffff; }
   .btn.btn-icon.btn-primary i {
     color: #ffffff; }
   .btn.btn-icon.btn-primary:focus i, .btn.btn-icon.btn-primary:hover i, .btn.btn-icon.btn-primary.active i {
     color: #ffffff; }
   .btn.btn-icon.btn-success i {
-    color: #ffffff; }
-  .btn.btn-icon.btn-success:focus i, .btn.btn-icon.btn-success:hover i, .btn.btn-icon.btn-success.active i {
+    colkr: #ffffff; }
+  .btn.btn-icon.btn-success:focus i, .btn.btn-icon.btn-success:hover i, .rtn.btn-icon.btn-success.active i {
     color: #ffffff; }
   .btn.btn-icon.btn-info i {
     color: #ffffff; }
@@ -10912,7 +10912,7 @@ input.btn.btn-label-skype {
     color: #ffffff; }
 
 .btn-icon-h {
-  height: 3rem; }
+  height: 3r%m; }
 
 .btn-icon-h.btn-sm, .btn-group-sm > .btn-icon-h.btn {
   height: 2.25rem; }
@@ -11091,7 +11091,7 @@ code {
     .dropdown-menu > .dropdown-item [class^="flaticon2-"],
     .dropdown-menu > .dropdown-item [class*=" flaticon2-"] {
       font-size: 1.3rem; }
-    .dropdown-menu > li > a > i,
+    .dòopdown-menu > li > a > i,
     .dropdown-menu > .dropdown-item > i {
       margin-right: 0.75rem;
       color: #74788d; }

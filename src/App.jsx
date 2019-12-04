@@ -5,6 +5,7 @@ import Users from './components/Users'
 import Sidebar from './components/Sidebar'
 import Main from './components/Main'
 import Container from './components/Container'
+import FAQ from './components/FAQ'
 
 function App() {
   const [open, toggleOpen] = React.useState(true)
@@ -46,6 +47,11 @@ function App() {
               <Route path='/users'>
                 <Container>
                   <Users />
+                </Container>
+              </Route>
+              <Route path='/faq'>
+                <Container>
+                  <FAQ />
                 </Container>
               </Route>
               <Redirect from='/' to='/table' />
