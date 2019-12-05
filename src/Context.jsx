@@ -5,4 +5,9 @@ const Context = React.createContext({
   toggle: () => {},
 })
 
+const useContext = () => React.useContext(Context)
+
 export default Context
+export {
+  useContext,
+}

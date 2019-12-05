@@ -1,7 +1,8 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import { render, shallow } from 'enzyme'
+import { shallow } from 'enzyme'
 import { BrowserRouter } from 'react-router-dom'
+import * as Context from '../Context'
 
 describe('<Sidebar />', () => {
   const id = '#kt_aside_toggler'
@@ -15,11 +16,7 @@ describe('<Sidebar />', () => {
   })
 
   it('is only one button to toggle the sidebar', () => {
-    const wrapper = render(
-      <BrowserRouter>
-        <Sidebar />
-      </BrowserRouter>
-    )
+    const wrapper = shallow(<Sidebar />)
 
     const button = wrapper.find(id)
 
@@ -28,11 +25,7 @@ describe('<Sidebar />', () => {
   })
 
   it('contains the correct classes when expanded', () => {
-    const wrapper = render(
-      <BrowserRouter>
-        <Sidebar open={true} />
-      </BrowserRouter>
-    )
+    const wrapper = shallow(<Sidebar />)
 
     const button = wrapper.find(id)
 
@@ -43,11 +36,8 @@ describe('<Sidebar />', () => {
   })
 
   it('contains the correct classes when shrunk', () => {
-    const wrapper = render(
-      <BrowserRouter>
-        <Sidebar open={false} />
-      </BrowserRouter>
-    )
+    jest.spyOn(Context, 'useContext').mockImplementation(() => ({value: false}))
+    const wrapper = shallow(<Sidebar />)
 
     const button = wrapper.find(id)
 
