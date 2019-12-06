@@ -2,9 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../media/logos/logo-1.png'
 import Submenu from './Submenu'
+import { useContext } from '../Context'
 
 function Sidebar(props) {
   const defaultClassesButton = "kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left"
+  const context = useContext()
 
   return (
     <>
@@ -20,9 +22,9 @@ function Sidebar(props) {
           </div>
           <div className="kt-aside__brand-tools">
             <button
-              className={props.open ? defaultClassesButton : `${defaultClassesButton} kt-aside__brand-aside-toggler--active`}
+              className={context.value ? defaultClassesButton : `${defaultClassesButton} kt-aside__brand-aside-toggler--active`}
               id="kt_aside_toggler"
-              onClick={() => props.toggleOpen(!props.open)}
+              onClick={() => context.toggle(!context.value)}
               >
               <span />
             </button>
