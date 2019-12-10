@@ -7,7 +7,7 @@ import Main from './components/Main'
 import Container from './components/Container'
 import FAQ from './components/FAQ'
 import Context from './Context'
-import * as Login from './components/Login.jsx'
+import Login from './components/Login'
 
 function App() {
   const [open, toggleOpen] = React.useState(true)
@@ -56,6 +56,11 @@ function App() {
                 <Route path='/faq'>
                   <Container>
                     <FAQ />
+                  </Container>
+                </Route>
+                <Route path='/login'>
+                  <Container>
+                    <Login />
                   </Container>
                 </Route>
                 <Redirect from='/' to='/table' />
