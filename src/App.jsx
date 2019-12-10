@@ -7,6 +7,7 @@ import Main from './components/Main'
 import Container from './components/Container'
 import FAQ from './components/FAQ'
 import Context from './Context'
+import * as Login from './components/Login.jsx'
 
 function App() {
   const [open, toggleOpen] = React.useState(true)
@@ -20,6 +21,7 @@ function App() {
           <Context.Provider value={{value: open, toggle: toggleOpen}}>
             <Sidebar />
             <Main>
+            <Login />
               <Switch>
                 <Route path='/table'>
                   <Container>
