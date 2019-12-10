@@ -21,7 +21,6 @@ function App() {
           <Context.Provider value={{value: open, toggle: toggleOpen}}>
             <Sidebar />
             <Main>
-            <Login />
               <Switch>
                 <Route path='/table'>
                   <Container>
