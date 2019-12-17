@@ -1,12 +1,14 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
-import Table from './components/Table'
-import Users from './components/Users'
-import FAQ from './components/FAQ'
 import Context from './Context'
 import UserContext from './UserContext'
 import PrivateRoute from './components/PrivateRoute'
-import Login from './components/Login'
+import Loader from './components/Loader'
+
+const Login = React.lazy(() => import('./components/Login'))
+const FAQ = React.lazy(() => import('./components/FAQ'))
+const Table = React.lazy(() => import('./components/Table'))
+const Users = React.lazy(() => import('./components/Users'))
 
 function App() {
   const [open, toggleOpen] = React.useState(true)
@@ -15,6 +17,7 @@ function App() {
   const defaultClasses = "kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--static kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed"
 
   return (
+    <React.Suspense fallback={<Loader />}>
     <div className={open ? defaultClasses : `${defaultClasses} kt-aside--minimize`}>
       <div className="kt-grid kt-grid--hor kt-grid--root">
         <div className="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
@@ -60,6 +63,7 @@ function App() {
         </div>
       </div>
     </div>
+    </React.Suspense>
   )
 }
 
